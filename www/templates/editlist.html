@@ -1,0 +1,43 @@
+<ion-view title="Edit assessment" id="page17"  class="background"  >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+     <div class="row logo_sec">
+            <div class="col">
+                <div class="logo">
+                    <img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        <div class="spacer20" ></div>
+
+         <div class="card content_sec">
+            <div class="row">
+                <div class="col">
+                  
+                     <form id="screen7-form4" class="list">
+
+            <label class="item item-select" id="screen7-select2">
+                <span class="input-label">Select</span>
+                
+                <select ng-model="assess.assessmen_id">
+                    <option  ng-repeat="assess in assessments" ng-value="{{assess.assessmen_id}}" >
+                      {{assess.assessmen}}
+                    </option>
+                   
+                </select>
+            </label>
+        </form>
+        <div class="row back_next_btns">
+                <div class="col">
+        <button class="button button-positive  icon-right ion-android-arrow-forward next-edit" ng-click="assessEdit(assess)">Next</button>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+       <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,61 @@
+<ion-view title="My Account" id="page13"  class="background user_profile"   ng-controller="myaccountCtrl" >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+
+
+    <ion-content padding="false" class="has-header">
+    
+        <div class="row logo_sec">
+            <div class="col">
+                <div class="logo">
+                    <img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card content_sec">
+        
+        <div class="row user_intro">
+        	<div class="col">
+                <h2>Hello {{employee.employee_name}}!</h2>
+                <p>{{employee.email}}</p>
+            </div>
+        </div>
+        
+        </div>
+        
+        <div class="card content_sec info_update no_space">       
+        	<div class="row">
+            	<div class="col">
+                    <form id="account-form" class="list">
+                    <div class="ng-binding error-sms">{{error}}
+                     <p class="{{success_sms}}">{{smg}}</p>
+                    </div>
+                        <label class="item item-input item-stacked-label" id="account-input1" name="account-input1">
+                            <span class="input-label">Name</span>
+                            <input class="account-input1" ng-model="employee.employee_name" value="{{employee.employee_name}}"  type="text">
+                        </label>
+                        <label class="item item-input item-stacked-label" id="account-input2" name="account-input2">
+                            <span class="input-label">Email</span>
+                            <input class="account-input2" ng-model="employee.email" value="{{employee.email}}" type="text" readonly>
+                        </label>
+                        <label class="item item-input item-stacked-label"  id="account-input3" name="account-input3">
+                            <span class="input-label">Password</span>
+                            <input ng-model="employee.newpassword" class="account-input3"  type="password">
+                        </label>
+                    </form>
+        		</div>
+        	</div>
+        	<div class="row back_next_btns">
+            	<div class="col">
+                    <button class="button button-block button-positive back" ng-click="update(employee)">Update</button>
+        		</div>
+        	</div>
+        </div>
+        
+        <div class="spacer100" ></div>
+         
+    </ion-content>
+</ion-view>
+

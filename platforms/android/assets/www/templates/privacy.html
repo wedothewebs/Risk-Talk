@@ -1,0 +1,36 @@
+<ion-view title="Privacy"  id="page1"  class="login background" hide-nav-bar="true">
+	<ion-header-bar class="legal-header">
+		<div class="buttons">
+      <button class="button button-clear close-button" ng-click="terms_of_service_modal.hide()">Close</button>
+    </div>
+	</ion-header-bar>
+    <ion-content padding="false" class="">
+        <div class="row logo_sec">
+        	<div class="col">
+            	<div class="logo">
+                	<img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row title_sec">
+            <div class="col">
+                <h3 id="screen2-heading2"  class="question welcome_title">
+                  {{privacy.privacy_name}}
+                </h3>
+            </div>
+        </div>
+        
+        <div class="card content_sec">
+        	<div class="row">
+            	<div class="col">
+                    <div class="legal-content" ng-bind-html="privacy.privacy_desc">
+
+                    </div>
+        		</div>
+        	</div>
+        </div>
+            
+      <!--   <a href="" class="forgot-password">forgot password ?</a> -->
+    </ion-content>
+</ion-view>

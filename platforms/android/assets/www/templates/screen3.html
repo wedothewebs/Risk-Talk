@@ -1,0 +1,52 @@
+<ion-view title="Your Task" id="page4"  class="background" ng-controller="screen3Ctrl" >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+        <div class="row logo_sec">
+        	<div class="col">
+            	<div class="logo">
+                	<img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row title_sec">
+        	<div class="col">
+                <h3 id="screen3-heading3"  class="question welcome_title">
+                {{questions.question}}
+                </h3>
+          	</div>
+        </div>
+        
+        <div class="card content_sec">
+        
+            <div class="row">
+                <div class="col">
+                    <div class="record-icone">
+                        <!--<img src="img/record_btn.png" class="record-icon"  width="100%" height="auto" ng-click="record()">-->
+                        <i class="icon ion-mic-a record-icon" width="100%" height="auto" ng-click="record()"></i>
+                        <h4 style="font-size: 15px" ng-show="startStopRecord">Recording in progress. Press record button to stop.</h4>
+                    </div>
+                </div>
+            </div>
+            
+        	<div class="row back_next_btns">
+                <div class="col">
+                <button class="button button-block button-positive icon-left icon ion-ios-arrow-left back" ng-click="screen3back(data)"> Back</button>
+                </div>
+                <div class="col">
+                <button class="button button-block button-positive icon-right icon ion-ios-arrow-right next" ng-click="uploadFile()">Next</button>
+                </div>
+            </div>
+            
+            <div class="row play_btn">
+            	<div class="col">
+                    <button class="button button-block button-positive btnplayAudio" ng-click="playAudioFile()" ng-hide="playAudio">Play</button>
+                </div>
+            </div>
+        
+        </div>
+        <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view  ng-controller="myassessmentCtrl" title="My Assessments" id="page15" class="background" >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+        <div class="row logo_sec">
+            <div class="col">
+                <div class="logo">
+                    <img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        <div class="card content_sec asses_lists no_space">
+        	<div class="row">
+            	<div class="col">
+                    <div class="item item-divider assessment-list" ng-repeat="ass in assessment">
+                    
+                        <span ng-click="details({{ass.assessmen_id}})"  class="icon ion-ios-compose"></span>
+                        
+                        <p>{{ass.assessmen}}<br><span>Rate:{{ass.ratingName}}</span></p>
+                        
+                        <button style="float: right;" class="icon-right icon ion-ios-arrow-right"  ng-click="details({{ass.assessmen_id}})"></button>
+                    </div>
+          		</div>
+          	</div>
+        </div>
+        <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>

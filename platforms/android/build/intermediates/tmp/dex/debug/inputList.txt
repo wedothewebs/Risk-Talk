@@ -1,0 +1,2 @@
+F:\ionic\Risk_Talk\platforms\android\build\intermediates\classes\debug
+F:\ionic\Risk_Talk\platforms\android\build\intermediates\pre-dexed\debug\classes-3bdbc463cd7f591891c152653c7105ac80ae8479.jar

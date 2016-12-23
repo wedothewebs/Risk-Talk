@@ -1,0 +1,47 @@
+<ion-side-menus enable-menu-with-back-views="false" style="">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="side-menu21"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="right" id="side-menu21">
+        <ion-header-bar class="bar-stable">
+            <div class="title">Menu</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-right has-header ">
+            <ion-list id="menu-list1">
+                <ion-item id="menu-list-item1" ui-sref="menu.screen1" menu-close="" style=""><i class="icon ion-ios-mic-outline"></i>New Assessment </ion-item>
+                <ion-item id="menu-list-item2" ui-sref="menu.editlist" menu-close="" style=""><i class="icon ion-ios-compose-outline"></i>Amend Assessment</ion-item>
+                <ion-item id="menu-list-item3" ui-sref="menu.myassessment" menu-close="" style=""><i class="icon ion-ios-list-outline"></i>My Assessments</ion-item>
+                <ion-item id="menu-list-item4" ui-sref="menu.myaccount" menu-close="" style=""><i class="icon ion-ios-person-outline"></i>My Account</ion-item>
+                <ion-item id="menu-list-item5" ng-click="logout()"  style=""><i class="icon ion-ios-unlocked"></i>Logout</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+
+<div class="tabs tabs-icon-top">
+  <a class="tab-item" ui-sref="menu.newAssessment">
+    <i class="icon ion-ios-mic-outline"></i>
+    <span  class="tab-item-name">New Assessment </span>
+  </a>
+  <a class="tab-item" ui-sref="menu.editlist">
+    <i class="icon ion-ios-compose-outline"></i>
+    <span class="tab-item-name">Amend Assessment</span>
+  </a>
+
+  <a class="tab-item" ui-sref="menu.myassessment">
+    <i class="icon ion-ios-list-outline"></i>
+    <span class="tab-item-name">My Assessments</span>
+  </a>
+  <a class="tab-item" ui-sref="menu.myaccount">
+    <i class="icon ion-ios-person-outline"></i>
+    <span class="tab-item-name">My Account </span> 
+  </a>
+
+</div>

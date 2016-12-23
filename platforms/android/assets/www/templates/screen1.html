@@ -1,0 +1,53 @@
+
+<ion-view title="Assesment" id="page2"  class="background ion-navicon" >
+    <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+        <div class="row logo_sec">
+        	<div class="col">
+            	<div class="logo">
+                	<img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row title_sec">
+        	<div class="col">
+                <h3 id="screen1-heading2"  class="question-1 question welcome_title">
+                {{questions.question}}
+                <br>
+                {{employee_name}}
+                </h3>
+          	</div>
+        </div>
+        
+        <div class="row asses_box">
+        	<div class="col">
+            	<div class="list card">
+                	<div class="">
+                        <a ui-sref="menu.screen2" id="screen1-button2" class="button button-positive  button-block back-btn item item-icon-left item-icon-right">
+                        	<i class="icon ion-ios-compose"></i>
+                            Create a Risk Assessment
+                            <i class="icon ion-ios-arrow-right"></i>
+                        </a>
+                    </div>
+        		</div>
+        	</div>
+        </div>
+        <div class="row asses_box">
+        	<div class="col">
+            	<div class="list card">
+                	<div class="">
+                        <a ng-click="edit(data)"  id="screen1-button2" class="button button-positive  button-block back-btn item item-icon-left item-icon-right">
+                        	<i class="icon ion-reply"></i>
+                            Amend an Assessment
+                            <i class="icon ion-ios-arrow-right"></i>
+                        </a>
+                    </div>
+        		</div>
+        	</div>
+        </div>
+         <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>

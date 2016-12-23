@@ -1,0 +1,51 @@
+<ion-view title="Likelihood" id="page9"  class="background"  >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+        
+        <div class="row logo_sec">
+            <div class="col">
+                <div class="logo">
+                    <img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row title_sec">
+        	<div class="col">
+                <h3 id="screen8-heading8"  class="question welcome_title">
+                {{questions.question}}
+                </h3>
+          	</div>
+        </div>
+
+        <!--<h3 id="screen8-heading8" class="question">{{questions.question}}</h3>-->
+        
+        <div class="card content_sec">
+        	<div class="row">
+            	<div class="col">
+                    <form id="screen8-form5" class="list">
+                        <label class="item item-select" id="screen8-select3">
+                            <span class="input-label">Select</span>
+                             <select ng-model="questions.ans_option_check">
+                               <option ng-selected="consequence.order_list == questions.ans_option_check" ng-repeat="consequence in consequences" value="{{consequence.order_list}}">
+                                  {{consequence.option_name}}
+                                </option>
+                            </select>
+                        </label>
+                    </form>
+        		</div>
+        	</div>
+            <div class="row back_next_btns">
+            	<div class="col">
+                    <button class="button button-block button-positive icon-left icon ion-ios-arrow-left back" ng-click="screen8back(data)"> Back</button>
+        		</div>
+                <div class="col">
+                    <button class="button button-block button-positive icon-right icon ion-ios-arrow-right next" ng-click="screen8(questions)">Next</button>
+        		</div>
+        	</div>
+        </div>
+        <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>

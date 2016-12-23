@@ -1,0 +1,50 @@
+<ion-view title="Create Assesment" id="page3"  class="background"  >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+		<div class="row logo_sec">
+        	<div class="col">
+            	<div class="logo">
+                	<img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row title_sec">
+        	<div class="col">
+                <h3 id="screen2-heading2"  class="question welcome_title">
+                {{questions.question}}
+                </h3>
+          	</div>
+        </div>
+        
+        <div class="card content_sec">
+        
+        <div class="row">
+            <div class="col">
+                <form id="screen2-form2" class="list">
+                    
+                     
+                    <label class="item item-input item-stacked-label question-2" id="screen2-input3">
+                        <input ng-model="questions.assessmen"   placeholder="Please type here" value="{{questions.assessmen}}"  type="text">
+                    </label>
+        
+                </form>
+            </div>
+        </div>
+		
+        <div class="row back_next_btns">
+        	<div class="col">
+                <a ui-sref="menu.screen1" id="screen2-button8" class="button button-block button-positive icon-left icon ion-ios-arrow-left back">Back</a>
+        	</div>
+            <div class="col">
+                <button class="button button-block button-positive icon-right icon ion-ios-arrow-right next" ng-click="screen2(questions)">Next</button>
+        	</div>
+        </div>
+        
+        </div>
+      <div class="spacer100" ></div>
+        <!-- <a ui-sref="menu.screen3" id="screen2-button7" class="button button-positive  icon-right ion-android-arrow-forward next">Next</a> -->
+    </ion-content>
+</ion-view>

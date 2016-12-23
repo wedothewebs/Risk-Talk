@@ -1,0 +1,62 @@
+<ion-view title="Assessment Details" id="page17" ng-controller="details"  class="background"  >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+
+    <ion-content padding="false" class="has-header">
+        <div class="row logo_sec">
+            <div class="col">
+                <div class="logo">
+                    <img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        <div class="card content_sec asses_details no_space">
+        	<div class="row">
+            	<div class="col">
+                  <div class="item item-divider assessment-list asses_details_title">
+                   <p>{{assessment.assessmen}} <br><span>Rate: 
+                   <samp class="" style="background: {{rating.color}}">{{rating.name}}</samp></span></p>
+                  </div>
+          		</div>
+          	</div>
+      		<div class="row">
+            	<div class="col">
+              <!-- {{answer}} -->
+                  <div class="item item-divider assessment-list asses_qus_ans" ng-repeat="ans in answer">
+                   <p> Q: {{ans.question}}  </p>
+                   <p ng-if="ans.answerName"> A:  {{ans.answerName}}</p>
+                 
+
+                   <!-- {{sound.ans_sound_file}} -->
+                   <!--  <div class="row"  > -->
+
+                    <div class="item item-avatar"  ng-if="ans.soundfile" ng-repeat="sound in ans.soundfile" ng-if="sound.ans_sound_file !=''">
+                        <img src="http://findicons.com/files/icons/2711/free_icons_for_windows8_metro/512/audio_wave.png">
+                        <!-- {{sound}} -->
+
+                      <div class="item tabs  tabs-icon-left">
+                        <a class="tab-item" ng-if="PlayId != sound.answer_id"  ng-click="playSound('{{sound.ans_sound_file}}',{{sound.answer_id}})" >
+                          <i class="icon ion-ios-play"></i>
+                          <!--  {{sound.answer_id}} {{PlayId}} -->
+                        </a>
+                        <a class="tab-item" ng-if="PlayId == sound.answer_id"  ng-click="pause('{{sound.ans_sound_file}}')">
+                          <i class="icon ion-android-checkbox-blank"></i>
+                           
+                        </a>
+                      </div>
+                      </div>
+                     
+               
+                  <!--  <samp class="btnplayAudio" ng-click="playSound('http://risktalk.com.au/uploads/answer/{{sound.ans_sound_file}}')" ng-click="stopRecord()"  style="background:#007cdc; color: #ffffff ;">Play</samp> -->
+                  <!--  <samp class="btnplayAudio" ng-click="stopRecord()" >Stop</samp> -->
+
+                  </div>
+          		</div>
+          	</div>
+
+         </div>
+         <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>
+

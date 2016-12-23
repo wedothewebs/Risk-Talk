@@ -1,0 +1,70 @@
+<ion-view title="Critical Task" id="page5"  class="background"  >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+    
+        <div class="row logo_sec">
+            <div class="col">
+                <div class="logo">
+                    <img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row title_sec">
+        	<div class="col">
+                <h3 id="screen4-heading4"  class="question welcome_title">
+                {{questions.question}}
+
+                
+                </h3>
+          	</div>
+        </div>
+
+        <!--<h3 id="screen4-heading4" class="question">
+        
+        {{questions.question}}</h3>-->
+        
+        <div class="card content_sec">
+            <div class="row">
+                <div class="col">
+                    <form id="screen4-form3" class="list">
+                        <label class="item item-select" id="screen4-select1">
+                            <span class="input-label">Select</span>
+                            <!-- <select ng-model="questions.ans_option_check">
+                                <option  ng-selected="questions.ans_option_check == 'Work At Height'"  value="Work At Height">Work At Height</option>
+                                <option  ng-selected="questions.ans_option_check == 'Confined Spaces'"  value="Confined Spaces">Confined Spaces</option>
+                                <option ng-selected="questions.ans_option_check == 'Plant and Equipment'"  value="Plant and Equipment">Plant and Equipment</option>
+                                <option ng-selected="questions.ans_option_check == 'Long Distance Driving'" value="Long Distance Driving">Long Distance Driving</option>
+                                <option  ng-selected="questions.ans_option_check == 'Traffic Management'" value="Traffic Management">Traffic Management</option>
+                                <option ng-selected="questions.ans_option_check == 'Hot Works'" value="Hot Works">Hot Works</option>
+                                <option ng-selected="questions.ans_option_check == 'Cranes and Lifting'" value="Cranes and Lifting">Cranes and Lifting</option>
+                                <option ng-selected="questions.ans_option_check == 'Pressure Vessels'" value="Pressure Vessels">Pressure Vessels</option>
+                                <option ng-selected="questions.ans_option_check == 'Electrical Work'" value="Electrical Work">Electrical Work</option>
+                                <option ng-selected="questions.ans_option_check == 'Hazardous Chemicals'" value="Hazardous Chemicals">Hazardous Chemicals</option>
+                                <option  ng-selected="questions.ans_option_check == 'No'" value="No">No</option>
+                            </select> -->
+
+                            <select ng-model="questions.ans_option_check">
+                                <option  ng-selected="criticalrisk.option_name == questions.ans_option_check" ng-repeat="criticalrisk in criticalrisks" ng-value="{{criticalrisk.option_name}}" >
+                                  {{criticalrisk.option_name}}
+                                </option>
+                               
+                            </select>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="row back_next_btns">
+                <div class="col">
+                    <button class="button button-block button-positive icon-left icon ion-ios-arrow-left back" ng-click="screen4back(data)"> Back</button>
+                </div>
+                <div class="col">
+                    <button class="button button-block button-positive icon-right icon ion-ios-arrow-right next" ng-click="screen4(questions)">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-view title="Risk Level" id="page10"  class="background"  >
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+    
+        <div class="row logo_sec">
+            <div class="col">
+                <div class="logo">
+                    <img src="img/logo-sm.png" alt="LOGO"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row title_sec">
+        	<div class="col">
+                <h3 id="screen9-heading9"  class="question welcome_title">
+                {{questions.question}}
+                </h3>
+          	</div>
+        </div>
+
+
+        <!--<h3 id="screen9-heading9" class="question">{{questions.question}}</h3>-->
+        
+        <div class="card content_sec">
+            <div class="row">
+                <div class="col">
+                    <form id="screen9-form6" class="list">
+                        <label class="item item-input" id="screen9-input4" style="background: {{valueName.color}} ;">
+                            <span class="input-label risk_value" style="color: #000 !important ; font-weight: bold;">{{valueName.name}}</span>
+                            <input placeholder="" type="text">
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="row back_next_btns">
+                <div class="col">
+                    <button class="button button-block button-positive icon-left icon ion-ios-arrow-left back" ng-click="screen9back(data)"> Back</button>
+                </div>
+                <div class="col">
+                    <button class="button button-block button-positive icon-right icon ion-ios-arrow-right next" ng-click="screen9(data)">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="spacer100" ></div>
+    </ion-content>
+</ion-view>
